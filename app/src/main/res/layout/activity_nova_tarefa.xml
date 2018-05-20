@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp"
     tools:context=".Activity.NovaTarefaActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/et_descricao_tarefa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descriçao da tarefa" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/sp_prioridade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+</LinearLayout>
