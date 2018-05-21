@@ -5,51 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="6dp"
-    tools:context=".Activity.NovaTarefaActivity">
 
+    tools:context=".Activity.NovaTarefaActivity"
+    >
 
-    <android.support.design.widget.TextInputLayout
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        >
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/et_descricao_tarefa"
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_descricao_tarefa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descriçao da tarefa" />
+        </android.support.design.widget.TextInputLayout>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/sp_prioridade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descriçao da tarefa" />
-    </android.support.design.widget.TextInputLayout>
+            app:ms_multiline="false"
+            app:ms_enableFloatingLabel="true"
+            app:ms_enableErrorLabel="false"
+            app:ms_floatingLabelText="Teste"
+            app:ms_thickness="1dp"
+            app:ms_arrowSize="16dp"
+            app:ms_alignLabels="false"
+            />
 
-    <fr.ganfra.materialspinner.MaterialSpinner
-        android:id="@+id/sp_prioridade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:ms_multiline="false"
-        app:ms_enableFloatingLabel="true"
-        app:ms_enableErrorLabel="false"
-        app:ms_floatingLabelText="Teste"
-        app:ms_thickness="1dp"
-        app:ms_arrowSize="16dp"
-        app:ms_alignLabels="false"
-    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/sp_categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_multiline="false"
+            app:ms_enableFloatingLabel="true"
+            app:ms_enableErrorLabel="false"
+            app:ms_floatingLabelText="Categoria"
+            app:ms_dropDownHintView="@color/colorAccent"
+            app:ms_thickness="1dp"
+            app:ms_arrowSize="16dp"
+            app:ms_alignLabels="false"
+            />
+    </LinearLayout>
 
-    <fr.ganfra.materialspinner.MaterialSpinner
-        android:id="@+id/sp_categoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:ms_multiline="false"
-        app:ms_enableFloatingLabel="true"
-        app:ms_enableErrorLabel="false"
-        app:ms_floatingLabelText="Categoria"
-        app:ms_dropDownHintView="@color/colorAccent"
-        app:ms_thickness="1dp"
-        app:ms_arrowSize="16dp"
-        app:ms_alignLabels="false"
-        />
+
+
 
 
 
