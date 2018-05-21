@@ -20,17 +20,41 @@
             android:hint="Descriçao da tarefa" />
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/sp_prioridade"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:ms_multiline="false"
+        app:ms_enableFloatingLabel="true"
+        app:ms_enableErrorLabel="false"
+        app:ms_floatingLabelText="Teste"
+        app:ms_thickness="1dp"
+        app:ms_arrowSize="16dp"
+        app:ms_alignLabels="false"
+    />
 
-        <Spinner
-            android:id="@+id/sp_prioridade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <fr.ganfra.materialspinner.MaterialSpinner
+        android:id="@+id/sp_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ms_multiline="false"
+        app:ms_enableFloatingLabel="true"
+        app:ms_enableErrorLabel="false"
+        app:ms_floatingLabelText="Categoria"
+        app:ms_dropDownHintView="@color/colorAccent"
+        app:ms_thickness="1dp"
+        app:ms_arrowSize="16dp"
+        app:ms_alignLabels="false"
+        />
 
 
-    </android.support.design.widget.TextInputLayout>
+
+
+
 
 
 

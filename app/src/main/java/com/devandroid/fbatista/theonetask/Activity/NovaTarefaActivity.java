@@ -8,10 +8,15 @@ import android.widget.Spinner;
 
 import com.devandroid.fbatista.theonetask.R;
 
+import java.lang.reflect.Array;
+
+import fr.ganfra.materialspinner.MaterialSpinner;
+
 public class NovaTarefaActivity extends AppCompatActivity {
 
     private EditText mDescricaoTarefa;
-    private Spinner mPrioridadeTarefa;
+    private MaterialSpinner mPrioridadeTarefa;
+    private MaterialSpinner mCategoriaTarefa;
 
 
 
@@ -22,10 +27,16 @@ public class NovaTarefaActivity extends AppCompatActivity {
 
         mDescricaoTarefa = findViewById(R.id.et_descricao_tarefa);
         mPrioridadeTarefa = findViewById(R.id.sp_prioridade);
+        mCategoriaTarefa = findViewById(R.id.sp_categoria);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+        ArrayAdapter<CharSequence> adapterPrioridade = ArrayAdapter.createFromResource(
                 this, R.array.prioridades, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mPrioridadeTarefa.setAdapter(adapter);
+        adapterPrioridade.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mPrioridadeTarefa.setAdapter(adapterPrioridade);
+
+        ArrayAdapter<CharSequence> adapterCategoria = ArrayAdapter.createFromResource(
+                this, R.array.categorias, android.R.layout.simple_spinner_item);
+        adapterCategoria.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mCategoriaTarefa.setAdapter(adapterCategoria);
     }
 }
